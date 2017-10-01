@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>People App</title>
+  </head>
+  <body>
+
+    <div class="hero-unit" id="statsModule"></div>
+    <script id="stats-template" type="text/template">
+      <h2>Stats</h2>
+      <strong>people: {{people}}</strong>
+    </script>
+
+    <div id="peopleModule">
+      <h1>People</h1>
+      <input placeholder="name" type="text">
+      <button id="addPerson">Add Person</button>
+      <ul id="people">
+        <script id="people-template" type="text/template">
+          {{#people}}
+          <li>
+            <span>{{.}}</span>
+            <i class="del">X</i>
+          </li>
+          {{/people}}
+        </script>
+      </ul>
+    </div>
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
